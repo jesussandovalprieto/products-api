@@ -1,0 +1,20 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: true
+    show-sql: true
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/productsdb
+    username: root
+    password: root123456
+  flyway:
+    enable: false
+    locations: classpath:db/migration
+    baselineOnMigrate: true
+    installed-by: jesussandoval
